@@ -1,0 +1,29 @@
+import java.util.*;
+
+public class Main 
+{
+  public static void main(String[] args) 
+  {
+    Scanner sc = new Scanner(System.in);
+    List<String> medicines = new ArrayList<String>();
+
+    
+    medicines.add(sc.nextLine());
+
+    
+    medicines.add(sc.nextLine());
+
+    
+    medicines.add(sc.nextLine());
+
+    
+    Collections.sort(medicines, (s1, s2) -> s1.compareTo(s2));
+
+    
+    
+    for (String medicine : medicines)
+    {
+      System.out.println(medicine);
+    }
+  }
+}
