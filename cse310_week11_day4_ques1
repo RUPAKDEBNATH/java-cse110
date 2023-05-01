@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class BracketGame 
+{
+
+    public static void main(String[] args) 
+{
+        Scanner scanner = new Scanner(System.in);
+
+        String bracketString = scanner.nextLine();
+
+        String name = scanner.nextLine();
+
+        String finalString = bracketString.substring(0, 2) + name + bracketString.substring(2);
+
+        System.out.println(finalString);
+
+        scanner.close();
+    }
+}
