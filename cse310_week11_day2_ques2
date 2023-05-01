@@ -1,0 +1,38 @@
+import java.util.*;
+
+public class CharacterCount 
+{
+    public static void main(String[] args) 
+{
+        Scanner scanner = new Scanner(System.in);
+      
+        String inputString = scanner.nextLine();
+        
+        if (inputString.length() <= 5) 
+{
+            System.out.println("Invalid Input");
+            System.exit(0);
+        }
+        
+        char[] charArray = inputString.toCharArray();
+        Arrays.sort(charArray);
+        
+        int count = 1;
+        char currentChar = charArray[0];
+        StringBuilder output = new StringBuilder();
+        for (int i = 1; i < charArray.length; i++) 
+{
+            if (charArray[i] == currentChar)
+ {
+                count++;
+            } else 
+{
+                output.append(currentChar).append(count);
+                count = 1;
+                currentChar = charArray[i];
+            }
+        }
+        output.append(currentChar).append(count);
+        System.out.println(output.toString());
+    }
+}
