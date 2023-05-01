@@ -1,0 +1,28 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args)
+ {
+       
+        Scanner sc=new Scanner(System.in);
+        int no=sc.nextInt();
+        if(no>=20 && no<=400)
+        {
+            if((no%2==0) && (no%3==0))
+            {
+              
+                System.out.println("True");
+            }
+            else{
+                System.out.println("False");
+            }
+            
+          
+        }
+        else{
+            System.out.println("Invalid Input");
+        }
+    }
+}
