@@ -1,0 +1,30 @@
+import java.util.Arrays;
+
+public class Main 
+{
+    
+    public static double[] average_marks(double [][] marks) 
+{
+        double[] averages = new double[marks.length];
+        for (int i = 0; i < marks.length; i++) 
+{
+            Arrays.sort(marks[i]);  
+            double sum = marks[i][1] + marks[i][2];  
+            averages[i] = sum / 2.0; 
+        }
+        return averages;
+    }
+
+    public static void main(String[] args)
+ {
+       
+        double[][] marks = {{10.5, 2.5, 15}, {5.25, 6.75, 11.25}};
+        double[] averages = average_marks(marks);
+
+       
+        for (double avg : averages)
+ {
+            System.out.print(avg + " ");
+        }
+    }
+}
